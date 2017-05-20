@@ -11,19 +11,19 @@
 
 
 <!-- Style Sheet  -->
-<link href="javaScriptFiles/css/homePage.css" rel="stylesheet" type="text/css" >
-<link href="javaScriptFiles/css/addInventory.css" rel="stylesheet" type="text/css" >
+<link href="../javaScriptFiles/css/homePage.css" rel="stylesheet" type="text/css" >
+<link href="../javaScriptFiles/css/addInventory.css" rel="stylesheet" type="text/css" >
 
 
-<script src="javaScriptFiles/module/mainApp.js" type ="text/javascript"></script>
-<script src="javaScriptFiles/directives/HomePageDirective.js" type ="text/javascript"></script>
-<script src="javaScriptFiles/directives/FileModel.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/module/mainApp.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/directives/HomePageDirective.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/directives/FileModel.js" type ="text/javascript"></script>
 <!-- Controller -->
-<script src="javaScriptFiles/controller/addInventoryController.js" type ="text/javascript"></script>
-<script src="javaScriptFiles/controller/mainAppController.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/controller/addInventoryController.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/controller/mainAppController.js" type ="text/javascript"></script>
 <!-- Service -->
-<script src="javaScriptFiles/service/addInventoryService.js" type ="text/javascript"></script>
-<script src="javaScriptFiles/service/FileReader.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/service/addInventoryService.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/service/FileReader.js" type ="text/javascript"></script>
 
 <title>HomePageIndex.jsp</title>
 </head>
@@ -40,8 +40,8 @@
 	<a href="http://localhost:9090/WebService/login" class="btn btn-default">Log Out</a>
 		</div>
 		<div class ="view">
-		<div ng-view></div>
-		</div>
+		 <div ng-view></div>
+ 		</div>
 	</div>
 </body>
 </html>

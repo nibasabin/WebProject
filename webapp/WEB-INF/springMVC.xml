@@ -26,21 +26,21 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 http://www.springframework.org/schema/aop 
 http://www.springframework.org/schema/aop/spring-aop.xsd">
 	
-	<context:component-scan base-package="com.controller" />
-	<!-- <context:component-scan base-package="com.dao.manager" />
-	<bean class ="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> -->
 	<mvc:annotation-driven />
+	<context:component-scan base-package="com.controller" />
+	<bean class ="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> 
+
 	<!-- pointing to the resource file where view Resolver will look for js files -->
-	<mvc:resources mapping="/admin/javaScriptFiles/**" location="/WEB-INF/admin/javaScriptFiles/"/>
+	<mvc:resources mapping="/javaScriptFiles/**" location="/WEB-INF/javaScriptFiles/"/>
+	<mvc:resources mapping="/javaScriptFiles/html/**" location="/WEB-INF/javaScriptFiles/html/"/>
 	
-	
-<!--  	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
-			<value>/WEB-INF/javaScriptFiles/html/</value>
+			<value>/WEB-INF/</value>
+			
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
 	</bean>
-	 -->
 </beans>

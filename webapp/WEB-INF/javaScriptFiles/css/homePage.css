@@ -1,5 +1,5 @@
 body{
-	background : #777775;
+	background : rgb(97, 131, 177);;
 }
 .container{
     margin: auto;
@@ -7,7 +7,8 @@ body{
     height:100%;
     border: 1px solid;
     padding: 10px;
-    background:#f9f7f7
+    background:#f9f7f7;
+    margin-top:30px;
 }
 .view{
 	border: 1px solid rgba(0, 0, 0, 0.2);

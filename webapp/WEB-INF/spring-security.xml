@@ -11,11 +11,18 @@
 			http://www.springframework.org/schema/context
 			http://www.springframework.org/schema/context/spring-context-3.2.xsd">
  
-    <security:http auto-config="true">
-       <security:intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
-       <!-- <security:form-login login-page="http://localhost:9090/WebService/login"   default-target-url="http://localhost:9090/WebService/homePage" authentication-failure-url="/red.html?error=true" />--> 
-       <security:logout logout-success-url="http://localhost:9090/WebService/admin/login" /> 
+    <security:http auto-config="true" >
+       <security:intercept-url pattern="/user/*" access="ROLE_ADMIN" />
+       <security:form-login login-page="/login" 
+        default-target-url="http://localhost:9090/WebService/user/homePage" 
+        login-processing-url="/loginCheck"
+        authentication-failure-url="/login?error=true" 
+        always-use-default-target="true"/>
+       <security:logout logout-success-url="/login?logout=true"/>  
     </security:http>
+    
+
+    
     <security:authentication-manager>
         <security:authentication-provider>
             <security:user-service>

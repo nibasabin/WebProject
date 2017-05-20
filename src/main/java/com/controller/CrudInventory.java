@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,12 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rest.client.RestClient;
 import com.sun.jersey.api.client.ClientResponse;
-import com.web.entity.ItemObject;
 
 
 @Controller
 @RequestMapping("/inventory")
 public class CrudInventory {
+	@Autowired
+	private ItemObject itemObject;
 
 	@RequestMapping(value="/addItem", method = RequestMethod.POST)
 	public @ResponseBody Integer addInventory( HttpServletRequest request){	
@@ -58,6 +60,11 @@ public class CrudInventory {
 			}
 		return output;
 
+	}
+	
+	@RequestMapping(value="/testController")
+	public @ResponseBody String testController(){
+		return "controller works fine" ;
 	}
 }
 
