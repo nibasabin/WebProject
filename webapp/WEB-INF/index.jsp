@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
@@ -31,13 +32,15 @@
 <body ng-app="mainApp"  ng-controller = "mainAppController">
 	<div class = "container	">
 		<div class ="menuBar">
-			<ul>
-			  <li><a href="#/" class="button"><button>Home</button></a></li>
-			  <li><a href="#addInventory" class="button"><button>Add Inventory</button></a> </li>
-			  <li><a href="#red" class="button"><button>Red</button></a></li>
-
-			</ul>
-	<a href="http://localhost:9090/WebService/login" class="btn btn-default">Log Out</a>
+				<ul>
+				  <li><a href="#/" class="button"><button>Home</button></a></li>
+				  <li><a href="#addInventory" class="button"><button>Add Inventory</button></a> </li>
+				  <li><a href="#red" class="button"><button>Red</button></a></li>
+	
+				</ul>
+				<form id="logOff" action ="/WebService/logout" method="get">
+				<button class="logOffButton" type="submit">logoff</button>
+				</form>
 		</div>
 		<div class ="view">
 		 <div ng-view></div>
