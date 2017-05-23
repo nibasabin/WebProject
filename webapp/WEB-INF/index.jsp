@@ -1,4 +1,6 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +32,9 @@
 
 <body ng-app="mainApp"  ng-controller = "mainAppController">
 	<div class = "container	">
+		<div class ="userLabel">
+		<label>Welcome, ${firstLastName}</label>
+		</div>
 		<div class ="menuBar">
 				<ul>
 				  <li><a href="#/" class="button"><button>Home</button></a></li>

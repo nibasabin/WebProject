@@ -27,7 +27,7 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop.xsd">
 	
 	<mvc:annotation-driven />
-	<context:component-scan base-package="com.controller" />
+	<context:component-scan base-package="com.controller,com.manager,com.rest.client" />
 	<bean class ="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> 
 
 	<!-- pointing to the resource file where view Resolver will look for js files -->

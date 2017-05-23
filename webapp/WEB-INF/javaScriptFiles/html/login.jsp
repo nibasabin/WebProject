@@ -15,6 +15,9 @@
 </head>
 <body class="loginBody" ng-app="sighUpModule">
 
+<% 
+String userName = request.getParameter("j_username");
+session.setAttribute("username", userName); %>
 	<center>
 		<div class="container">
 			<div class="containerLeft">
