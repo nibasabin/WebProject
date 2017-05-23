@@ -11,8 +11,11 @@
 			http://www.springframework.org/schema/context
 			http://www.springframework.org/schema/context/spring-context-3.2.xsd">
  
-    <security:http auto-config="true" >
-       <security:intercept-url pattern="/user/*" access="ROLE_ADMIN" />
+    <security:http auto-config="true" ><!-- use-expressions="true" -->
+    <security:intercept-url pattern="/user/*" access="ROLE_ADMIN" />
+    
+<!--        <security:intercept-url pattern="/user/*" access="hasRole('ROLE_ADMIN')" />
+       <security:intercept-url pattern="/javaScriptFiles/**" access="permitAll()" /> -->
        <security:form-login login-page="/login" 
         default-target-url="http://localhost:9090/WebService/user/homePage" 
         login-processing-url="/loginCheck"
@@ -29,10 +32,22 @@
     
     <security:authentication-manager>
         <security:authentication-provider>
-            <security:user-service>
-                <security:user name="a" password="a" authorities="ROLE_ADMIN" />
-                <security:user name="b" password ="b" authorities="ROLE_USER"/>
-            </security:user-service>
+        	 <security:jdbc-user-service data-source-ref="dataSource"
+                users-by-username-query=
+                    "select username,password,enabled from UserInformationEntity where username=?" authorities-by-username-query="select username,role from UserInformationEntity where username=?"/>
+
         </security:authentication-provider>
     </security:authentication-manager>
+    	
+	<beans:bean id="dataSource" class= "org.springframework.jdbc.datasource.DriverManagerDataSource">      
+      <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"></beans:property>
+      <beans:property name="url" value="${jdbc.url}"></beans:property>
+      <beans:property name="username" value="${jdbc.username}"></beans:property>
+      <beans:property name="password" value="${jdbc.password}"></beans:property>
+   </beans:bean>
+   
+      <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+     <beans:property name="location" value ="/WEB-INF/db.properties">
+     </beans:property>
+  </beans:bean>
 </beans:beans>

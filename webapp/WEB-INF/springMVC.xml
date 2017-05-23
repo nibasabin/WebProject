@@ -33,7 +33,7 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 	<!-- pointing to the resource file where view Resolver will look for js files -->
 	<mvc:resources mapping="/javaScriptFiles/**" location="/WEB-INF/javaScriptFiles/"/>
 	<mvc:resources mapping="/javaScriptFiles/html/**" location="/WEB-INF/javaScriptFiles/html/"/>
-	
+	<!-- <mvc:resources mapping="/javaScriptFiles/html/**" location="/WEB-INF/javaScriptFiles/css/"/> -->
   	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/</value>
@@ -43,4 +43,5 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 			<value>.jsp</value>
 		</property>
 	</bean>
+
 </beans>
