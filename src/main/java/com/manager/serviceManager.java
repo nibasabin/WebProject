@@ -6,13 +6,9 @@ import org.json.JSONObject;
 
 import com.web.entity.ItemObject;
 
-
-public interface EndPointManager {
-
-	public String getUserFirstLastName(String emailId);
-	public Integer addInventory(JSONObject jsonObject);
+public interface serviceManager {
 	
-	public Integer createUser(JSONObject jsonObject);
 	public List<ItemObject> getFilteredResult(JSONObject filterCriteria);
 	public List<ItemObject> getAllInventory();
+
 }
