@@ -22,7 +22,8 @@
 <link href="../javaScriptFiles/JQueryDataTable/dataTableCss.css" rel="stylesheet" type="text/css" >
 <script src="../javaScriptFiles/JQueryDataTable/dataTable.js" type ="text/javascript"></script>
 <script src="../javaScriptFiles/JQueryDataTable/angular-datatables.js" type ="text/javascript"></script>
-
+<script src="../javaScriptFiles/JQueryDataTable/dataTables.scroller.min.js"></script>
+<script src="../javaScriptFiles/JQueryDataTable/angular-datatables.scroller.min.js"></script>
 
 
 

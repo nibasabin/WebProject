@@ -20,27 +20,11 @@ public class serviceController {
 	@Autowired
 	private serviceManager serviceManager;
 	
-	@RequestMapping(value="/getFilterdResults",consumes="application/json",produces ="application/json")
+	@RequestMapping(value="/getFilterdResults",method = RequestMethod.POST ,consumes="application/json",produces ={"application/json"})
 	public @ResponseBody List<ItemObject> getFilteredResult(@RequestBody String jsonString){
 		List<ItemObject> item =null;
-	//	FilterCriteriaObject filterCriteria = new FilterCriteriaObject();
 		try {
 				JSONObject jsonObject = new JSONObject(jsonString);
-		/*		filterCriteria.setCategory(jsonObject.get("category").toString());
-				filterCriteria.setMinAmount(Float.parseFloat(jsonObject.get("minAmount").toString()));
-				filterCriteria.setMaxAmount(Float.parseFloat(jsonObject.get("maxAmount").toString()));
-				filterCriteria.setNewItem(Boolean.parseBoolean(jsonObject.get("newItem").toString()));
-				filterCriteria.setUsedItem(Boolean.parseBoolean(jsonObject.get("usedItem").toString()));
-				
-				ArrayList<String> subCategoryList = new ArrayList<String>();     
-				JSONArray jsonArray = (JSONArray)jsonObject.get("subCategoryList"); 
-				if (jsonArray != null) { 
-				   int len = jsonArray.length();
-				   for (int i=0;i<len;i++){ 
-					   subCategoryList.add(jsonArray.get(i).toString());
-				   } 
-				} 
-				filterCriteria.setSubCategoryList(subCategoryList);*/
 				item=	serviceManager.getFilteredResult(jsonObject);
 				System.out.println("item"+item);
 				

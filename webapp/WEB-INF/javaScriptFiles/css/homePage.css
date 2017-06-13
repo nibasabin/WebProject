@@ -315,13 +315,14 @@ body {
 
 .dataTables_wrapper .dataTables_filter label {
 	padding-top: 10px;
-	margin-left: 32%;
+	margin-left: 15%;
 	font-size: large;
 }
 
 .dataTables_wrapper .dataTables_filter input {
 	width: 300px;
 	margin-left: 10px;
+	border-color: black !important;
 }
 
 table.dataTable thead th, table.dataTable thead td {
@@ -334,19 +335,50 @@ table.dataTable thead th, table.dataTable thead td {
 	color: black;
 	font-weight: bolder;
 	margin-top: -11px;
-	height: 25px;
-	text-align: center
+	height: 30px;
+	text-align: center;
+	padding-top: 5px;
 }
 
 #DataTables_Table_0_paginate {
 	background-color: #68a3bb;
 	margin-left: -1px;
 	margin-bottom: -11px;
-	height: 25px;
+	height: 30px;
 	text-align: center
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
 	color: black;
 	font-weight: bolder;
+}
+
+#DataTables_Table_0_length select {
+    width: 100px;
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+	
+}
+
+#DataTables_Table_0_filter {
+	/* background-color:red; */
+	height: 44px;
+	/* width:70%; */
+}
+
+
+table.dataTable thead th{
+	height:50px;
+	text-align: center;
+}
+
+ .dataTables_scrollBody{
+	height: 405px;
+} 
+.dataTables_scroll{
+	height:522px;
+}
+table.dataTable tbody td {
+    text-align: center;
 }

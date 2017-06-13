@@ -13,7 +13,7 @@ angular.module("mainApp")
 		],
 		
 		electronicsList : [ 
-	            {"subCategoryName":"Mobile","selected":false},
+	            {"subCategoryName":"Phone","selected":false},
 	            {"subCategoryName":"Laptop","selected":false},
 	            {"subCategoryName":"Monitor","selected":false},
 	            {"subCategoryName":"Desktop","selected":false},

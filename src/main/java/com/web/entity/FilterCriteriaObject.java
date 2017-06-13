@@ -10,8 +10,8 @@ public class FilterCriteriaObject implements Serializable{
 	private static final long serialVersionUID = 2122952745937535497L;
 	private String category; 
 	private ArrayList<String> subCategoryList;
-	private Float minAmount;
-	private Float maxAmount;
+	private Double minAmount;
+	private Double maxAmount;
 	private Boolean newItem;
 	private Boolean usedItem;
 	public String getCategory() {
@@ -26,16 +26,16 @@ public class FilterCriteriaObject implements Serializable{
 	public void setSubCategoryList(ArrayList<String> subCategoryList) {
 		this.subCategoryList = subCategoryList;
 	}
-	public Float getMinAmount() {
+	public Double getMinAmount() {
 		return minAmount;
 	}
-	public void setMinAmount(Float minAmount) {
+	public void setMinAmount(Double minAmount) {
 		this.minAmount = minAmount;
 	}
-	public Float getMaxAmount() {
+	public Double getMaxAmount() {
 		return maxAmount;
 	}
-	public void setMaxAmount(Float maxAmount) {
+	public void setMaxAmount(Double maxAmount) {
 		this.maxAmount = maxAmount;
 	}
 	public Boolean getNewItem() {
