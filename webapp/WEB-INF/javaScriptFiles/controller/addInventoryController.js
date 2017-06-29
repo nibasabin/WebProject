@@ -1,13 +1,14 @@
 angular.module("mainApp")
 .controller("addInventoryController",function($scope,$compile,DTOptionsBuilder, DTColumnBuilder,$q,addInventoryService,fileReader,itemTypeService,$base64){
 
+	$scope.dtInstance = {};
 	var init = function (){
 		$scope.item={};
 		$scope.item.category="Others";
 		$scope.item.type="Computer Accessories";
 		$scope.item.price=0;
 		$scope.item.description = ""
-		$scope.dtInstance = {};
+
 		$scope.itemTypeSelected = false;
 		$scope.itemCategory = itemTypeService.categoryList;
 	}
