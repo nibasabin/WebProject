@@ -1,10 +1,17 @@
 angular.module("mainApp")
 .controller("addInventoryController",function($scope,$compile,DTOptionsBuilder, DTColumnBuilder,$q,addInventoryService,fileReader,itemTypeService,$base64){
 
-	$scope.item={};
-	$scope.dtInstance = {};
-	$scope.itemTypeSelected = false;
-	$scope.itemCategory = itemTypeService.categoryList;
+	var init = function (){
+		$scope.item={};
+		$scope.item.category="Others";
+		$scope.item.type="Computer Accessories";
+		$scope.item.price=0;
+		$scope.item.description = ""
+		$scope.dtInstance = {};
+		$scope.itemTypeSelected = false;
+		$scope.itemCategory = itemTypeService.categoryList;
+	}
+	init();
 	
 	$scope.showItemType = function(){
 	if($scope.itemTypeSelected == true){
@@ -58,7 +65,7 @@ angular.module("mainApp")
  
 
 	$scope.addInventory = function(item){
-		if(item.image != null){
+		if( $scope.imageSrc != null){
 		item.image = $base64.encode($scope.imageSrc);
 		}else {
 			item.image = $base64.encode(addInventoryService.noImageEncoded());
@@ -75,6 +82,7 @@ angular.module("mainApp")
 			if(response.status == 200){
 				$scope.dtInstance.rerender();
 				alert("item saved successfully");
+				init();
 			}
 		});
 		
@@ -124,20 +132,19 @@ angular.module("mainApp")
 								}
 								var dom = '<div class ="descriptionTable"><table>'+
 											'<tr>'+
-												'<td>Type Id:</td>'+
-												'<td>'+data.typeId+'</td>'+
+												'<td>Id :</td>'+
+												'<td>'+data.id+'</td>'+
 											'</tr>'+
 											'<tr>'+
-												'<td>Type:</td>'+
+												'<td>Type :</td>'+
 												'<td>'+data.type+'</td>'+
 											'</tr>'+
 											'<tr>'+
-												'<td>Condition:</td>'+
+												'<td>Condition :</td>'+
 												'<td>'+condition+'</td>'+
 											'</tr>'+	
 										'</table>'+
 										'<div class ="descriptionBox">'+data.description+'</div></td></div>'
-				//												'<textarea rows="4" cols="44" readonly>'+data.description+'</textarea></td></div>'
 											
 									return dom;
 									

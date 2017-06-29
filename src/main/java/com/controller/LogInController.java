@@ -2,6 +2,9 @@ package com.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+import javax.swing.plaf.OptionPaneUI;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +34,11 @@ public class LogInController {
 		ModelAndView model = new ModelAndView();
 
 		if (error !=null ) {
-			model.addObject("error", "Invalid username and password!");
+			JOptionPane optionPane = new JOptionPane("Invalid UserName Or Password",JOptionPane.WARNING_MESSAGE);
+			JDialog dialog = optionPane.createDialog("Error!");
+			//dialog.setAlwaysOnTop(true); // to show top of all other application
+			dialog.setVisible(true); 
+		//	model.addObject("error", "Invalid username and password!");
 		}
 		
 		if(logout != null){

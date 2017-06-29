@@ -107,17 +107,21 @@ angular.module("mainApp")
 										}
 										var dom = '<div class ="descriptionTable"><table>'+
 													'<tr>'+
-														'<td>Type Id:</td>'+
-														'<td>'+data.typeId+'</td>'+
+														'<td>Id :</td>'+
+														'<td>'+data.id+'</td>'+
 													'</tr>'+
 													'<tr>'+
-														'<td>Type:</td>'+
+														'<td>Type :</td>'+
 														'<td>'+data.type+'</td>'+
 													'</tr>'+
 													'<tr>'+
-														'<td>Condition:</td>'+
+														'<td>Condition :</td>'+
 														'<td>'+condition+'</td>'+
 													'</tr>'+	
+													'<tr>'+
+													'<td>Seller :</td>'+
+													'<td>'+data.sellerName+'</td>'+
+												'</tr>'+
 												'</table>'+
 												'<div class ="descriptionBox">'+data.description+'</div></td></div>'
 //												'<textarea rows="4" cols="44" readonly>'+data.description+'</textarea></td></div>'

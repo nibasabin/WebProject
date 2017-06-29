@@ -61,7 +61,7 @@ String userName = request.getParameter("j_username");
 		</nav>
 	</div>
 	<div class = "row">
-			<label class="signInErrorMsg">${error}</label>
+			<label id ="loginError" class="signInErrorMsg">${error}</label>
 	</div>
 	
 	<div class = "row">
