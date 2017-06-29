@@ -22,9 +22,9 @@ public class serviceManagerImpl implements serviceManager{
 
 
 	@Override
-	public List<ItemObject> getAllInventory() {
+	public List<ItemObject> getAllInventory(String category) {
 	
-		return endPointManager.getAllInventory();
+		return endPointManager.getAllInventory(category);
 	}
 
 

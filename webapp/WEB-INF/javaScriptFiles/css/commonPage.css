@@ -400,3 +400,7 @@ white-space: nowrap;
 .sellItemButtons{
 	width:75px;
 }
+
+.nav li.selected {
+ background-color:red !important;
+}

@@ -43,8 +43,8 @@ public class EndPointManagerImpl implements EndPointManager {
 		}
 
 	@Override
-	public List<ItemObject> getAllInventory() {
-		Response response =  restClient.GET("http://localhost:8080/Ir-Service/rest/service/getAllInventory");
+	public List<ItemObject> getAllInventory(String category) {
+		Response response =  restClient.POST("http://localhost:8080/Ir-Service/rest/service/getAllInventory",category);
 		return response.readEntity(new GenericType<List<ItemObject>>(){});
 		}
 

@@ -30,9 +30,9 @@ angular.module("mainApp")
 		}
 	}
 	var chooseUrl = function() {
-
+		var category = $scope.findCategorySelected();
 		if ($scope.isFiterCriteriaEmpty()) {
-			return filterCriteriaService.getAllInventory()
+			return filterCriteriaService.getAllInventory(category)
 		} else {
 			return filterCriteriaService.filterCriteria($scope.filterCriteria)
 		}
@@ -71,14 +71,12 @@ angular.module("mainApp")
 
 			.withPaginationType('full_numbers').withOption(
 					"order", [ [ 0, 'asc' ] ])
-			// .withScroller()
 			.withOption("scrollY", 405)
 			.withOption("lengthMenu", [ 10, 25, 50 ])
 			.withOption('createdRow', function (row, data, dataIndex) {
 		        $compile(angular.element(row).contents())($scope);
 		    });
-//			.withOption('fixedHeader',true);
-//			.withOption('autoWidth',false);
+
 
 	$scope.dtColumns = [
 						//	DTColumnBuilder.newColumn('id').withTitle('SNo'),

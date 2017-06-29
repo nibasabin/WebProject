@@ -36,9 +36,9 @@ public class serviceController {
 		return item;
 	}
 
-	@RequestMapping(value="/getAllInventory",method = RequestMethod.GET,produces ="application/json")
-	public @ResponseBody List<ItemObject> getAllInventory(){
-		List<ItemObject> item = serviceManager.getAllInventory();
+	@RequestMapping(value="/getAllInventory",method = RequestMethod.POST,produces ="application/json")
+	public @ResponseBody List<ItemObject> getAllInventory(@RequestBody String category){
+		List<ItemObject> item = serviceManager.getAllInventory(category);
 		return item;
 	}
 
