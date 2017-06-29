@@ -14,14 +14,21 @@
 	}
 
 #signUpFormContainer{
-	background-color: rgba(12, 12, 12, 0.6);
-	width: 50%;
+	/* background-color: rgba(12, 12, 12, 0.6); */
+	height:auto;
+	width: 100%;
+	/* color: black !important; */
 }
 
 .header{
-	height: 50px;
-	margin-top: 20px;
-	/* background: blue; */
+	width: 100%;
+	margin-left: 0px;
+	/* height: 35px; */
+	/* margin-top: 20px; */
+	background: #9a3334;
+	border-top-radius: 25px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
 }
 .loginBody{
     /* background-image: url(image/image2.jpg); */
@@ -75,65 +82,86 @@
 .displayPannel {
 	/* background-color: red; */
 	height:auto;
-
 }
 .test{
 	height : 300px;
 	background-color: blue;
 }
 .signUpForm{
-    height: auto;
-    width: 100%;
+    /* height: 400px; */
+    width: 20%;
     /* background-color: yellow; */
     margin: auto;
+    border: solid;
+    border-width: 1px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-color: #dddddd;
 }
 .headerLabel{
 	/* background-color: red; */
 	text-align: center;
 	width: 100%;
-	height: inherit;
+	/* height: inherit; */
 	color: white;
 	/* margin-top: 19px; */
-	font-size: xx-large;
+	font-size: 20px;
 }
 
 .signUpTable{
 	/* background-color:red; */
-	margin:auto;
-	width: 85%;
-	margin-top: 50px;
-	
+	/* margin:auto; */
+	width: 100%;
+	margin: 0px;
+	/* margin-top: 50px; */
+	/* margin-left: 10px; */
 }
 .signUpTable input{
-    background-color: rgba(12, 12, 12, -1);
+    background-color: white;
     width: 100%;
     border: none;
-    border-bottom-color: white;
+    /* border-bottom-color: white; */
     border-bottom: solid;
     border-bottom-width: 1px;
 }
 .signUpTable td{
-    color: white;
-    font-size: x-large;
+    /* color: white; */
+    /* font-size: x-large; */
     font-style: italic;
     font-weight: 100;
+    /* padding: 0px; */
+    /* height: 35px !important; */
+    padding: 0px !important;
 }
 .submitButton {
-    background-color: #222222;
+    background-color: #9a3334 !important;
     height: 35px;
-    width: 35%;
+    width: 75px!important;
     border-radius: 25px;
     border: solid;
     border-width: 1px;
     border-color: white;
     color: white;
-
 }
 .signUpFormSubmit{
 	/* background-color:red; */
 	text-align: center;
-	margin-top: 50px;
-	height: auto;
-	margin-bottom: 50px;
+	margin-top: 25px;
+	/* height: auto; */
+	/* margin-bottom: 50px; */
 }
 
+.signUpTable table{
+	width:100%
+}
+
+.signUpTable label{
+	margin-left:10px;
+	font-size:12px;
+}
+.signUpTable input{
+	margin-left:10px;
+	width: 200px;
+	font-size:12px;
+	font-weight: bold;
+}

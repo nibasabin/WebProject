@@ -1,3 +1,28 @@
+.addInventoryContainer{
+	width:auto;
+}
+
+.descriptionTable {
+	/* background-color:yellow; */
+	height:150px;
+}
+.descriptionTable table{
+	margin:10px;
+}
+.descriptionTable table tr td {
+	/* background-color:red; */
+	padding:0px !important;
+	float:left;
+    font-size: 12px;
+}
+.descriptionBox{
+    float: left;
+    margin-left: 5px;
+    font-style: italic;
+    font-size: 12px;
+	
+}
+
 .sellItemHeader{
 	background-color: #9a3334;
 	height: 30px;
@@ -12,6 +37,7 @@
     border-top-right-radius: 25px;
     color: white;
     width: 325px;
+    margin-left: 10px;
 }
 .sellItemHeader label{
 	margin-top:3px;
@@ -85,111 +111,3 @@
 	border-top-left-radius:25px;
 	border-top-right-radius:25px;
 }
-
-
-/* .addInventoryContainer{
-	height: 435px;
-	width: 100%;
-
-	background:  green;
-
-}
-.displayWindow{
-	height: 100%;
-	width: 70%;
-	float:right;
-	background: #d9dbdd;
-	
-}
-
-.displayWindow .container{
-	border: none;
-	width: 99%;
-	height: 100%;
-	background : beige;
-}
-.leftBox{
-    height: 100%;
-    padding: 10px;
-    width: 30%;
-    background: #d9dbdd;
-    border: solid;
-    border-color: #f9f7f7;
-    float: left;
-}
-.leftBox .container{
-	border: none;
-	width: 99%;
-	padding-left: -1px;
-	height: 100%;
-}
-.addInventoryLabel {
-	padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    width:100%;
-    background: rgba(18, 114, 152, 0.39);;
-    text-align: center;
-}
- 
-.addInventoryTable tr td{
-	width: inherit;
-	padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-   
-}
-
-.addInventoryTable tr{
-	width: inherit;
-} 
-
-.submitInventory{
-	float: right;
-	margin-top: 20px;
-	width: 100%;
-	height: 35px;
-	background:rgba(169, 66, 66, 0.53)
-}
-
-.fileChooser{
-	width: 95%;
-	background: white;
-	border: solid;
-	border-width: thin;
-	border-color: azure;
-}
-
-.reviewProductLabel{
-	padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    width:100%;
-    background: rgba(18, 114, 152, 0.39);;
-    text-align: center;
-    margin-top: 10px;
-}
-.reviewProductTable{
-	height: 100%;
-    width: 45%;
-    float: left;
-    border: solid;
-    border-color: #f9f7f7;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.itemImage{
-	height:100%;
-	width:100%;
-	padding: 10px;
-}
-
-.imageReview {
-	height: 100%;
-    width: 55%;
-    float: right;
-    border: solid:;
-    border: solid;
-    border-color: azure;
-	
-} */

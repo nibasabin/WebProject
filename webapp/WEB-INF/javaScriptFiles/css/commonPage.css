@@ -16,6 +16,26 @@
 	margin-left:20px;
 }
 
+.descriptionTable {
+	/* background-color:yellow; */
+	height:150px;
+}
+.descriptionTable table{
+	margin:10px;
+}
+.descriptionTable table tr td {
+	/* background-color:red; */
+	padding:0px !important;
+	float:left;
+    font-size: 12px;
+}
+.descriptionBox{
+    float: left;
+    margin-left: 5px;
+    font-style: italic;
+    font-size: 12px;
+	
+}
 
 .mainMenu{
     /* background-color: yellow; */
