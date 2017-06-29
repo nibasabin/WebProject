@@ -26,11 +26,17 @@ public class RestClient {
 	public Response POST(String url,JSONObject obj) {
 		Client client = ClientBuilder.newClient();
 		WebTarget webTarget = client.target(url);
-		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON);
+		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON).accept(MediaType.TEXT_PLAIN);
 		Response response = invocationBuilder.post(Entity.entity(obj.toString(), MediaType.APPLICATION_JSON));
 		return response;
-
-
+	}
+	
+	public Response POST(String url,String obj) {
+		Client client = ClientBuilder.newClient();
+		WebTarget webTarget = client.target(url);
+		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON).accept(MediaType.TEXT_PLAIN);
+		Response response = invocationBuilder.post(Entity.entity(obj, MediaType.APPLICATION_JSON));
+		return response;
 	}
 }
 		

@@ -1,5 +1,5 @@
-angular.module("sighUpModule",[])
-.controller("signUpController",function($scope,signUpService){
+angular.module("mainApp")
+.controller("signUpController",function($scope,signUpService,$location){
 
 	$scope.createUser= function(user){
 		if(user.password != user.confirmPassword){
@@ -7,10 +7,13 @@ angular.module("sighUpModule",[])
 		}else{
 			document.getElementById("passwordErrorMsg").innerHTML = "";
 			signUpService.addUser(user);
+			$location.path("/")
 			$scope.user={};
-			
 		}
-			
+	}
+	
+	$scope.cancelSignUp = function(){
+		$location.path("/")
 	}
 
 });

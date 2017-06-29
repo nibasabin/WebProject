@@ -15,4 +15,7 @@ public interface EndPointManager {
 	public Integer createUser(JSONObject jsonObject);
 	public List<ItemObject> getFilteredResult(JSONObject filterCriteria);
 	public List<ItemObject> getAllInventory();
+	public List<ItemObject> getUsersInventory(String userName);
+	public void addToGlobalInventory(Integer itemId);
+	public void deleteItem(Integer itemId);
 }

@@ -1,0 +1,382 @@
+#userPageContainer{
+    height: auto;
+    width: 100%;
+}
+.userPagecategory{
+    background-color: #4267b2;
+    height: 35px;
+    border: solid!important;
+    border-width: 1px !important;
+    min-height: 40px !important;
+    margin-top: white;
+    margin-top: 20px;
+    border-color: white !important;
+}
+.dt-loading{
+	margin-left:20px;
+}
+
+
+.mainMenu{
+    /* background-color: yellow; */
+    min-height: 35px !important;
+    border: solid;
+    border: solid;
+    border-color: white!important;
+}
+.userPageBody{
+	background-image: url(image/image2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.userName {
+	color: #101010;
+	/* margin-top: 20px; */
+	/* background-color: #b24261; */
+}
+.userName label{
+ margin-left: 40px !important;
+}
+
+.userPageOptionBar{
+    /* background-color: #9a3334; */
+    height: 40px;
+    margin-top: 10px;
+    border: solid !important;
+    border-width: 1px !important;
+    border-color: white !important;
+    width: auto;
+    margin-left: -1px;
+}
+.userPageOptionBar ul li a{
+	/* margin-top: -10px; */
+	width:75px;
+	height: 35px;
+	padding: 0px;
+}
+.userPageOptionBar ul li a:hover{
+background-color:white;
+border-color:white !important;
+}
+.userPageOptionBar ul li :active{
+	border-color:black ;
+	background-color:red;
+}
+
+.userPageButton{
+    height: 25px;*
+    width: 75px; */
+    background-color: rgb(54, 66, 125);
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    border-radius:25px;
+    margin-top: 5px;
+    /*  margin-left:10px; */
+    /* padding: 0px !important; */
+    /* margin-bottom: 18px !important; */
+    width: 75px;
+    background-color: rgb(154, 51, 52) !important;
+}
+
+.userPageOptionBar button{border-radius:25px;}
+
+#logOff{
+	width:100px;
+	float:right;
+}
+
+.customButton{
+    background-color: #9a3334;
+    font-size: 12px;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    margin-top: 5px;
+    border-color: #9a3334;
+}
+
+.categoryMenuBar {
+    background-color: #9a3334;
+    height: 40px;
+    margin: 0px;
+
+}
+
+.subCategory{
+	border:solid;
+	width: 215px;
+	border:none;
+	/*border-left:none;
+	border-top:none;
+	border-bottom:none;
+	border-right-width:1px;
+	border-right-color:grey; */
+	margin-left: 15px;
+	/* background-color: #7e2121; */
+	ht: 07px;
+	height: 746px;
+}
+
+.subCategory label{
+	font-size:12px;
+	/* 	color:white; */
+	/* margin-left: -1px; */
+	font-weight: normal;
+}
+
+.subCategory input{
+ /*    color: white; */
+ width: 70px;
+ margin-left: 10px;
+ height: 25px;
+ margin-top: none;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ background-color: white;
+ border-width: 1px;
+ border-color: black;
+}
+.criteria1 {
+	/* 	margin-left:20px;
+	margin-top:20px; */
+	/* background-color: #217c7e; */
+	border: solid;
+	border-width: 1px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: rgba(128, 128, 128, 0.75);
+	width: 215px;
+	margin-left: -15px!important;
+	}
+
+.criteriaInput{
+	margin-left:20px;
+	margin-top :20px;
+}
+.criteria1Checkbox{
+	margin-top:10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.criteria1Checkbox input{
+	width: 20px;
+    height: 15px;
+}
+
+.criteria2Box{
+	/* background-color:red; */
+	overflow: auto;
+	height: 528px;
+}
+
+.criteria2Box input {
+	width:20px;
+	margin-right:5px;
+}
+.criteira2{
+	margin-top:10px;
+	
+}
+
+ .criteria2 ul {
+	list-style:none;
+	margin-top:20px;
+	margin-left: -30px !important;
+	
+}
+ .criteria2 ul li {
+/* background-color:red; */
+white-space: nowrap;
+}
+.filterCriteriaHeader{
+    background-color: #9a3334;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    /* margin: -8px !important; */
+    width: 215px;
+    margin-left: -15px!important;
+    height: 30px;
+}
+.displayContainer{
+    border: solid;
+    border-width: 1px;
+    border-color: #dddddd;
+    /* border-top: none; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;;
+}
+
+.displayOptions{
+     height: 30px;
+    background-color: #9a3334;
+    width: 100%;
+    maring-left: 20px;
+    margin-left: -1px !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.showAllButton{
+	width: 75px;
+	background-color: #9a3334;
+	height: 25px;
+	border: none;
+	color: white;
+	margin-top: 3px;
+	margin-left: 20px;
+	float: left;
+	font-size: 12px;
+}
+
+.filterAndClear{
+	float:right;
+	margin-right:20px;
+}
+.filterAndClear button{
+	width: 75px;
+    margin-left: 10px;
+    background-color: #9a3334;
+    height: 35px;
+    border: none;
+    color: white;
+    margin-top: 3px;
+    height: 25px;
+    font-size: 12px;
+}
+#domHeader {
+	 /* background-color: red !important; */
+	 height: 50px !important;
+	 width: 97%;
+	 margin-left: 20px;
+}
+
+#domBody{
+	/* background-color:green; */
+	width: 96%;
+	margin-left: 20px;
+	border: solid;
+	border-width: 1px;
+	border-color: #dddddd;
+}
+
+.dataTables_scrollHead{
+	/* background-color:red; */
+	height: 25px;
+	/* margin-top: -10px !important; */
+}
+
+.dataTables_scrollHeadInner{
+	blackground-color:yellow;
+	/* background-color: yellow; */
+	argin: 0px!important; */
+	margin-top: -10px !important;
+	height: 25px;
+	/* width: 100%; */
+	margin-top: -10px !important;
+}
+#domHeader label{
+	font-size:12px;
+	color: black;
+	font-color:black;
+}
+#domFooter{
+    text-align: center;
+    border: solid;
+    margin-left: 5px;
+    border-width: 1px;
+    border-color: white;
+}
+
+#domHeader select,input {
+	background-color:rgba(12, 12, 12, 0.3);
+	border-radius:25px !important;
+	margin:10px;
+}
+
+.dataTableImage{
+	width: 145px;
+	height:150px;
+	margin:1px;
+	/* margin: 0px; */
+}
+.dataTableImageColumn{
+   /* width: auto !important; */
+   /* background-color: purple; */
+   text-align: center;
+   border-bottom: solid;
+   border-width: 1px;
+   border-color: #dddddd;
+   /* border: solid; */
+}
+
+.dataTableImageColumn th{
+   /*  width: 154px !important; */
+}
+.dataTableDescriptionColumn th{
+	/* width:450px !important; */
+}
+.dataTableDescriptionColumn{
+   /* width: 450px !important; */
+   /* color: white; */
+   /* border-right: solid; */
+   border-width: 1px;
+   text-align: center;
+   border-bottom:solid;
+   border-bottom-width:1px;
+   border-color: #dddddd;
+}
+.dataTableAddToCartColumn{
+	/* width:100px !important; */
+	/* color: white; */
+	border-right: solid;
+	border-width: 1px;
+	border-bottom: solid;
+	border-color: #dddddd;
+	border-bottom-width:1px;
+	text-align: center;
+}
+.dataTablePriceColumn th{
+	/* width:150px !important; */
+}
+.dataTablePriceColumn{
+	/* width:60px !important; */
+	/* color: white; */
+	/* border-right: solid; */
+	border-width: 1px;
+	text-align: center;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-color: #dddddd;
+}
+.dataTableUpdateColumn{
+	border-width: 1px;
+	text-align: center;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-color: #dddddd;
+}
+.dataTables_scrollBody{
+    height: 575px !important;
+}
+.dataTableAddToCartButton{
+     width: 80px;
+     background-color: #9a3334;
+     height: 35px;
+     border-radius: 25px;
+     border: solid;
+     border-width: 1px;
+     border-color: white;
+     color: white;
+     margin-top: 7px;
+     font-size: 12px;
+     height: 25px;
+}
+.sellItemButtons{
+	width:75px;
+}

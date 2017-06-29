@@ -27,4 +27,24 @@ public class serviceManagerImpl implements serviceManager{
 		return endPointManager.getAllInventory();
 	}
 
+
+	@Override
+	public List<ItemObject> getUsersInventory(String userName) {
+		
+		return endPointManager.getUsersInventory(userName);
+	}
+
+
+	@Override
+	public void addToGlobalInventory(Integer itemId) {
+		endPointManager.addToGlobalInventory(itemId);
+		
+	}
+
+
+	@Override
+	public void deleteItem(Integer itemId) {
+		endPointManager.deleteItem(itemId);		
+	}
+
 }

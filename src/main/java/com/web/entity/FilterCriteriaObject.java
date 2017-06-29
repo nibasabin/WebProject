@@ -14,6 +14,7 @@ public class FilterCriteriaObject implements Serializable{
 	private Double maxAmount;
 	private Boolean newItem;
 	private Boolean usedItem;
+	private Boolean itemCondition;
 	public String getCategory() {
 		return category;
 	}
@@ -49,6 +50,12 @@ public class FilterCriteriaObject implements Serializable{
 	}
 	public void setUsedItem(Boolean usedItem) {
 		this.usedItem = usedItem;
+	}
+	public Boolean getItemCondition() {
+		return itemCondition;
+	}
+	public void setItemCondition(Boolean itemCondition) {
+		this.itemCondition = itemCondition;
 	}
 
 	

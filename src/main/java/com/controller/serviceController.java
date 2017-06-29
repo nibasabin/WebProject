@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.json.JSONException;
@@ -41,5 +42,21 @@ public class serviceController {
 		return item;
 	}
 
+	@RequestMapping(value="/getUsersInventory",method = RequestMethod.GET,produces ="application/json")
+	public @ResponseBody List<ItemObject> getUsersInventory(Principal principal){
+		String userName = principal.getName();
+		List<ItemObject> item = serviceManager.getUsersInventory(userName);
+		return item;
+	}
+	
+	@RequestMapping(value="/addToGlobalInventory",method = RequestMethod.POST,produces ="application/json")
+	public @ResponseBody void addToGlobalInventory(@RequestBody String itemId){
+		serviceManager.addToGlobalInventory(Integer.parseInt(itemId));
+	}
+	
+	@RequestMapping(value="/deleteItem",method = RequestMethod.POST,produces ="application/json")
+	public @ResponseBody void deleteItem(@RequestBody String itemId){
+		serviceManager.deleteItem(Integer.parseInt(itemId));
+	}
 	
 }

@@ -4,113 +4,70 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<script type="text/javascript" src="javaScriptFiles/controller/signUpController.js"></script>
-<script type="text/javascript" src="javaScriptFiles/service/signUpService.js"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="javaScriptFiles/JQueryDataTable/dataTableCss.css" rel="stylesheet" type="text/css" >
+<link href="javaScriptFiles/css/commonPage.css" rel="stylesheet" type="text/css" >
 <link href="javaScriptFiles/css/logInSignUp.css" rel="stylesheet" type="text/css" >
 
+<script src="javaScriptFiles/JQueryDataTable/jquery.js" type ="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+<script src="javaScriptFiles/JQueryDataTable/dataTable.js" type ="text/javascript"></script>
+<script src="javaScriptFiles/JQueryDataTable/angular-datatables.js" type ="text/javascript"></script>
+<script src="javaScriptFiles/JQueryDataTable/dataTables.scroller.min.js"></script>
+<script src="javaScriptFiles/JQueryDataTable/angular-datatables.scroller.min.js"></script>
+<script src="javaScriptFiles/angularJs/angular-base64.min.js"></script>
+
+
+
+<script src="javaScriptFiles/module/mainApp.js" type="text/javascript" ></script>
+<script src="javaScriptFiles/controller/signUpController.js" type="text/javascript"></script>
+<script src="javaScriptFiles/controller/commonPageController.js" type="text/javascript"></script>
+<script src="javaScriptFiles/service/signUpService.js" type="text/javascript"></script>
+<script src="javaScriptFiles/service/itemTypeService.js" type="text/javascript" ></script>
+<script src="javaScriptFiles/service/filterCriteriaService.js" type="text/javascript"></script>
+
+
+
+
 </head>
-<body class="loginBody" ng-app="sighUpModule">
+<body class="loginBody" ng-app ="mainApp">
 
 <% 
 String userName = request.getParameter("j_username");
-session.setAttribute("username", userName); %>
-	<center>
-		<div class="container">
-			<div class="containerLeft">
-				<div class="login">
-					<div class="heading">
-						<label>Log In</label>
-					</div>
+//session.setAttribute("username", userName); %>
 
-					<form name='logInForm' action="loginCheck" method="post">
-						<br>
-						<div class="errormsg">
-							<label>${error}</label>
-						</div>
-						<br>
-						<table>
-							<tr>
-								<td>User:</td>
-								<td><input type='text' name='j_username' value=''></td>
-							</tr>
-							<tr>
-								<td>Password:</td>
-								<td><input type='password' name='j_password' /></td>
-							</tr>
-							<tr>
-							</tr>
-
-						</table>
-						<label>Forgot Password !</label> <input id="loginSubmit"
-							class="submit" name="submit" type="submit" value="Log In" />
-					</form>
-				</div>
+<div id ="loginContainer" class = "container-fluid" >
 
 
-			</div>
-			<div class="containerRight" ng-controller="signUpController">
-				<div class="heading">
-					<label>New User Sign Up</label>
-				</div>	<br> 
-				<div class="errormsg" >
-				<label id="passwordErrorMsg"></label>
-				</div>
-			<form>
-				<table>
-					<tr>
-						<td>First Name:</td>
-						<td><input type='text' name='firstName' ng-model='user.firstName' required></td>
-					</tr>
-					<tr>
-						<td>Last Name:</td>
-						<td><input type='text' name='lastName' ng-model='user.lastName' required/></td>
-					</tr>
-					<tr>
-						<td>Email Address:</td>
-						<td><input type='text' name='emailId' ng-model='user.emailId' required /></td>
-					</tr>
-
-					<tr>
-						<td>Password:</td>
-						<td><input type="password" name='password' ng-model='user.password' required/></td>
-					</tr>
-
-					<tr>
-						<td>Confirm Password:</td>
-						<td><input type='password' name='confirmPassword' ng-model='user.confirmPassword' required/></td>
-					</tr>
-					<tr>
-						<td>Date Of Birth:</td>
-						<td><input type='date' name='dateOfBirth' ng-model='user.dateOfBirth'/></td>
-					</tr>
-					<tr>
-						<td>Address:</td>
-						<td><input type='text' name='address' ng-model='user.address' /></td>
-					</tr>
-					<tr>
-						<td>City:</td>
-						<td><input type='text' name='city' ng-model='user.city' /></td>
-					</tr>
-					<tr>
-						<td>State:</td>
-						<td><input type='text' name='state' ng-model='user.state' /></td>
-					</tr>
-					<tr>
-						<td>Zip Code:</td>
-						<td><input type='text' name='zipCode' ng-model='user.zipCode' /></td>
-					</tr>
-
-				</table>
-				<input class="submit" type="submit" value="Submit" ng-click="createUser(user)" />
-				</form>
-					
-			</div>
-
-		</div>
-	</center>
+	<div class="row logInMenuBar">
+		<nav class="navbar navbar">
+		  <div class="container-fluid login" >		
+		      <form name='logInForm' action="loginCheck" method="post">
+			    <ul class="nav navbar-nav">
+					<li><label>User :</label></li>
+					<li><input  type='text' name='j_username' value=''></li>
+					<li><label >Password :</label></li>
+					<li><input type='password' name='j_password' /></li>
+					<li><input class ="signInButton" name="submit" type="submit" value="Sign In" /></li>
+					<li><a href="#signUp"><button type="button" class = "signUpButton">Sign Up</button></a></li>
+			    </ul>
+			    </form>
+		  </div>
+		</nav>
+	</div>
+	<div class = "row">
+			<label class="signInErrorMsg">${error}</label>
+	</div>
+	
+	<div class = "row">
+		<div class ="displayPannel" ng-view></div>
+	</div>
+	
+</div>
 </body>
 </html>

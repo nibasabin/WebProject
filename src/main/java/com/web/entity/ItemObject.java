@@ -10,13 +10,18 @@ public class ItemObject implements Serializable {
 	
 	private Integer id;
 	private Integer typeId;
-	private String description;
+
+	private String category;
 	private String type;
 	private Double price;
+	private String description;
+	//@XmlElement(type = Byte.class)
 	private String image;
 	private Boolean newItem;
 	private Boolean usedItem;
-
+	private String condition;
+	private String sellerName;
+	private Boolean itemSold;
 	
 	public Integer getId() {
 		return id;
@@ -30,11 +35,11 @@ public class ItemObject implements Serializable {
 	public void setTypeId(Integer typeId) {
 		this.typeId = typeId;
 	}
-	public String getDescription() {
-		return description;
+	public String getCategory() {
+		return category;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	public String getType() {
 		return type;
@@ -47,6 +52,12 @@ public class ItemObject implements Serializable {
 	}
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public String getImage() {
 		return image;
@@ -66,5 +77,24 @@ public class ItemObject implements Serializable {
 	public void setUsedItem(Boolean usedItem) {
 		this.usedItem = usedItem;
 	}
+	public String getCondition() {
+		return condition;
+	}
+	public void setCondition(String condition) {
+		this.condition = condition;
+	}
+	public String getSellerName() {
+		return sellerName;
+	}
+	public void setSellerName(String sellerName) {
+		this.sellerName = sellerName;
+	}
+	public Boolean getItemSold() {
+		return itemSold;
+	}
+	public void setItemSold(Boolean itemSold) {
+		this.itemSold = itemSold;
+	}
 	
+
 }

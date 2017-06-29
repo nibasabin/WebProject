@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
@@ -24,10 +24,13 @@
 <script src="../javaScriptFiles/JQueryDataTable/angular-datatables.js" type ="text/javascript"></script>
 <script src="../javaScriptFiles/JQueryDataTable/dataTables.scroller.min.js"></script>
 <script src="../javaScriptFiles/JQueryDataTable/angular-datatables.scroller.min.js"></script>
-
+<script src="../javaScriptFiles/angularJs/angular-base64.min.js"></script>
 
 
 <script src="../javaScriptFiles/module/mainApp.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/module/serviceModule.js" type ="text/javascript"></script>
+
+
 <script src="../javaScriptFiles/directives/HomePageDirective.js" type ="text/javascript"></script>
 <script src="../javaScriptFiles/directives/FileModel.js" type ="text/javascript"></script>
 <!-- Controller -->
@@ -38,7 +41,7 @@
 <script src="../javaScriptFiles/service/addInventoryService.js" type ="text/javascript"></script>
 <script src="../javaScriptFiles/service/FileReader.js" type ="text/javascript"></script>
 <script src="../javaScriptFiles/service/itemTypeService.js" type ="text/javascript"></script>
-<script src="../javaScriptFiles/service/homePageService.js" type ="text/javascript"></script>
+<script src="../javaScriptFiles/service/filterCriteriaService.js" type ="text/javascript"></script>
 
 <title>HomePageIndex.jsp</title>
 </head>
@@ -65,4 +68,4 @@
  		</div>
 	</div>
 </body>
-</html>
+</html> --%>

@@ -1,0 +1,107 @@
+<div ng-controller = "commonPageController">
+	<div class = "row categoryMenuBar" >
+		<nav class="navbar navbar">
+		<div style="margin-left:20px">
+		    <ul class="nav navbar-nav">
+				<li ng-repeat="x in categoryList track by $index">
+					<button class = "menuBarButtons customButton"ng-model="x.selected" ng-click="filterItem(x.categoryName)">{{x.categoryName}}</button>
+				</li>
+		    </ul>
+		    </div>
+		</nav>
+	</div>
+		
+	<div class = "row" style="margin-top:20px">
+		<div class="col-md-3 subCategory">
+		<div class = "row filterCriteriaHeader">
+		<label style="font-size: 15px; margin-top: 3px;color:white">Filter Criteria</label>
+		</div>
+			<div class = "row criteria1">
+					<div class ="row criteriaInput">
+						<label>Min Amount $ </label>
+						<input type = "number" ng-model = "minAmount">
+					</div>
+					
+					<div class ="row criteriaInput">
+						<label>Max Amount $</label>
+						<input type = "number" ng-model = "maxAmount">
+					</div>
+			
+					<div class ="row criteria1Checkbox">
+						<label>New</label>
+						<input type = "checkbox" ng-model = "newItem">
+						<label>Used</label>
+						<input type = "checkbox" ng-model = "usedItem">
+					</div>
+			</div>
+			<div class ="row criteria2Box">
+				<div class ="criteria2" ng-show="categoryList[0].selected">
+					<ul>
+						<li ng-repeat="x in electronicsList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+							</li>
+						</ul>
+				</div>
+				<div class ="criteria2" ng-show="categoryList[1].selected">
+					<ul>
+						<li ng-repeat="x in clothingList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+						</li>
+					</ul>
+				</div>
+				<div class ="criteria2" ng-show="categoryList[2].selected">
+					<ul>
+						<li ng-repeat="x in shoesList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+						</li>
+					</ul>
+				</div>
+				<div class ="criteria2" ng-show="categoryList[3].selected">
+					<ul>
+						<li ng-repeat="x in bagList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+						</li>
+					</ul>
+				</div>
+				<div class ="criteria2" ng-show="categoryList[4].selected">
+					<ul>
+						<li ng-repeat="x in perfumesList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+						</li>
+					</ul>
+				</div>
+				<div class ="criteria2" ng-show="categoryList[5].selected">
+					<ul>
+						<li ng-repeat="x in furnitureList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+						</li>
+					</ul>
+				</div>
+				<div class ="criteria2" ng-show="categoryList[6].selected">
+					<ul>
+						<li ng-repeat="x in otherList track by $index">
+							<span>	<input type = "checkbox" ng-model="x.selected"><label>{{x.subCategoryName}}</label></span>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class = "displayContainer">
+					<div class ="row displayOptions">
+						<button type="button" class="showAllButton userPageButton" ng-click = "showAllItem()">Show All</button>
+						<div class ="filterAndClear">
+							<button type="button" class="filterButton userPageButton" ng-click = "filterSearchCriteria()">Filter</button>
+							<button type="button" class="clearButton userPageButton" ng-click = "clearSearchCriteria()">Clear</button>
+						</div>
+	
+					</div>
+					<div class="row dataTableContainer">
+						<table datatable ="" dt-options="dtOptions" dt-columns="dtColumns" dt-instance ="dtInstance"></table>
+					</div>
+			</div>
+	
+		</div>
+	</div>
+</div>	

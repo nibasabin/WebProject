@@ -21,7 +21,7 @@ public class ApplicationStartController {
 		String firstLastName = userInformationManager.getUserFirstLastName(emailId);
 		
 		model.addObject("firstLastName", firstLastName);
-		model.setViewName("index");
+		model.setViewName("javaScriptFiles/html/index");
 		return model;
 	}
 	

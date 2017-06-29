@@ -1,8 +1,8 @@
-var app = angular.module("mainApp", ["ngRoute","datatables","datatables.scroller"]);
+var app = angular.module("mainApp", ["ngRoute","datatables","datatables.scroller","base64"]);
 app.config(function($routeProvider){
 	$routeProvider
 	.when("/",{
-		templateUrl:"../javaScriptFiles/html/homePage.html"
+		templateUrl:"/WebService/javaScriptFiles/html/commonHomePage.html"
 	})
 	.when("/addInventory",{
 		templateUrl:"../javaScriptFiles/html/addInventory.html"
@@ -10,5 +10,8 @@ app.config(function($routeProvider){
 	})
     .when("/red", {
         templateUrl : "../javaScriptFiles/html/red.html"
+    })
+    .when("/signUp",{
+    	templateUrl :"/WebService/javaScriptFiles/html/signUp.html"
     })
 });

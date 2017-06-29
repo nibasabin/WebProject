@@ -1,4 +1,93 @@
+.sellItemHeader{
+	background-color: #9a3334;
+	height: 30px;
+	text-align: center;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+.sellItemContainer{
+	/* background-color: red; */
+	height: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: white;
+    width: 325px;
+}
+.sellItemHeader label{
+	margin-top:3px;
+
+}
 .addInventoryContainer{
+	margin-top:20px;
+	/* background-color:blue; */
+}
+.sellItemBox {
+    background-color: white;
+    color: black;
+    font-size:12px;
+    border: solid;
+    border-width: 1px;
+    border-color: #dddddd;
+}
+.addInventoryTable{
+	height:auto;
+}
+.addInventoryTable tr {
+	height:30px;
+}
+.addInventoryTable tr td input {
+	background-color: white;
+    border-bottom: solid;
+    border-top: none;
+    width:200px;
+    border-right:none;
+    border-top: none;
+    border-bottom-color: black;
+    border-left: none;
+    border-width: 1px;
+    /* border: none; */
+}
+
+.addInventoryTable tr td textArea {
+	width:200px
+    /* border: none; */
+}
+.sellItemBox table{
+	margin-top:20px;
+	margin-left:20px;
+}
+.submitInventory{
+	text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;	
+}
+
+.dataTableHeader{
+    background-color: #9a3334;
+    height: 30px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    	text-align:center;
+}
+
+.dataTableHeader label{
+	color:white;
+	margin-left:20px;
+
+
+	}
+
+ .sellItemDataTableContainer{
+	margin-left:10px;
+	border:solid;
+	border-width:1px;
+	border-color:#dddddd;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+}
+
+
+/* .addInventoryContainer{
 	height: 435px;
 	width: 100%;
 
@@ -103,4 +192,4 @@
     border: solid;
     border-color: azure;
 	
-}
+} */

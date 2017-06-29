@@ -1,25 +1,121 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../javaScriptFiles/css/addInventory.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+<div ng-controller = "addInventoryController" class ="container" >
+	<div class =" row addInventoryContainer">
+		<div class = "col-md-4 sellItemContainer">
+			<div class ="row sellItemHeader">
+				<label> Sell Item</label>
+			</div>
+			<div class ="row sellItemBox">
+			<table class="addInventoryTable"> 
+						<tr>
+							<td>Item Category </td>
+							<td>
+								<select ng-model="item.category" >
+									 <option ng-repeat =" x in itemCategory track by $index" selected>{{x.categoryName}}</option>
+								</select>
+							</td>
+						</tr>
+						<tr ng-show ="showItemType()">
+							<td>Item Type </td>
+							<td>
+								<select ng-model="item.type">
+									 <option ng-repeat =" x in itemType() track by $index" selected>{{x.subCategoryName}}</option>
+								</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td> Upload Image</td>
+							<td>
+								<div class ="fileChooser">
+									<input id = "imageFile" type ="file" file-model="item.image" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*">
+								</div>
+							</td>
+						</tr>
+						
+						<tr><td>Price $</td><td><input style="width:100px" type ="text" ng-model = "item.price" ></td></tr>
+						<tr>
+							<td>Item Condition </td>
+							<td>
+								<div ng-init ="item.condition = 'new'" style="margin-left: 10px">
+									 <input type="radio" name="itemCondition" ng-model = "item.condition"  value="new" style ="width:30px"> New
+									 <input type="radio" name="itemCondition" ng-model = "item.condition" value="used" style ="width:30px" > Used
+								</div>	
+							</td>
+						</tr>
+						 <tr><td>Description</td></tr>
+						<!-- <tr><t></td><td><textarea rows="5" ng-model="item.description" style="width:250px"></textarea></td></tr>  -->
+					</table>
+					<div class="row"style="margin-left:20px ; margin-right:20px;">
+					<textarea rows="5" ng-model="item.description" style="width:100%;resize:none"></textarea>
+					</div>
+					<div class="row submitInventory">
+						<button class="customButton"  style ="border-radius:25px;"ng-click="addInventory(item)" type="button">Submit</button>
+					</div>
 
-<div ng-controller = "addInventoryController">
-	<div class ="addInventoryContainer">
+			</div>
+		</div>
+		<div class ="col-md-8 sellItemDataTableContainer">
+		<div class="row dataTableHeader">
+			<label>Inventory List</label>
+		</div>
+			<div class = "row">
+				<table datatable ="" dt-options="dtOptions" dt-columns="dtColumns" dt-instance ="dtInstance"></table>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+		
+<!-- 		</div>
+	
 		 <div class = "leftBox">
 					<label class="addInventoryLabel">Add Inventory</label>
 					<table class="addInventoryTable"> 
 						<tr>
-							<td>Product Type </td>
+							<td>Item Category </td>
 							<td>
-								<select ng-model="item.type" >
-									 <option ng-repeat =" x in productType track by $index" selected>{{x}}</option>
+								<select ng-model="item.category" >
+									 <option ng-repeat =" x in itemCategory track by $index" selected>{{x.categoryName}}</option>
 								</select>
 							</td>
 						</tr>
-						<tr><td> Upload Image</td><td>
-							<div class ="fileChooser">
-								<input type ="file" file-model="item.image" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*">
-							</div>
-						</td></tr>
+						<tr ng-show ="showItemType()">
+							<td>Item Type </td>
+							<td>
+								<select ng-model="item.type">
+									 <option ng-repeat =" x in itemType() track by $index" selected>{{x.subCategoryName}}</option>
+								</select>
+							</td>
+						</tr>
 						
-						<tr><td>Price</td><td><input style="width:95%" type ="text" ng-model = "item.price"></td></tr>
-						<tr><td>Product Description</td><td><textarea rows="5" cols="30"ng-model="item.description"></textarea></td></tr>
+						<tr>
+							<td> Upload Image</td>
+							<td>
+								<div class ="fileChooser">
+									<input type ="file" file-model="item.image" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*">
+								</div>
+							</td>
+						</tr>
+						
+						<tr><td>Price $</td><td><input style="width:95%" type ="text" ng-model = "item.price"></td></tr>
+						<tr>
+							<td>Item Condition </td>
+							<td>
+								<div ng-init ="item.condition = 'new'">
+									 <input type="radio" name="itemCondition" ng-model = "item.condition"  value="new" > New
+									 <input type="radio" name="itemCondition" ng-model = "item.condition" value="used" > Used
+								</div>	
+							</td>
+						</tr>
+						<tr><td>Item Description</td><td><textarea rows="5" cols="30"ng-model="item.description"></textarea></td></tr>
 	
 					</table>
 					<button class="submitInventory" ng-click="addInventory(item)" type="submit">Submit</button>
@@ -29,10 +125,14 @@
 					<label class="reviewProductLabel">Review Product To Upload</label>
 					<table> 
 								<tr>
-									<td>Product Type :</td><td>{{item.type}}</td>
+									<td>Item Category :</td><td>{{item.category}}</td>
+								</tr>
+								<tr>
+									<td>Item Type :</td><td>{{item.type}}</td>
 								</tr>
 								<tr><td>Price :</td><td >{{item.price}}</td></tr>
-								<tr><td>Product Description :</td></tr>
+								<tr><td>Item Condition : </td><td> {{item.condition}}</td></tr>
+								<tr><td>Item Description :</td></tr>
 								<tr><td>{{item.description}}</td></tr>
 			
 					</table>
@@ -43,4 +143,4 @@
 		
 		</div>
 	</div>
-</div>
+</div> -->

@@ -382,3 +382,8 @@ table.dataTable thead th{
 table.dataTable tbody td {
     text-align: center;
 }
+
+.dataTableImage{ 
+	height:200px;
+	width:200px;
+}

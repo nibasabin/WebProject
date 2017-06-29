@@ -48,5 +48,23 @@ public class EndPointManagerImpl implements EndPointManager {
 		return response.readEntity(new GenericType<List<ItemObject>>(){});
 		}
 
+	@Override
+	public List<ItemObject> getUsersInventory(String userName) {
+		Response response =  restClient.POST("http://localhost:8080/Ir-Service/rest/service/getUsersInventory",userName);
+		return response.readEntity(new GenericType<List<ItemObject>>(){});
+	}
+
+	@Override
+	public void addToGlobalInventory(Integer itemId) {
+		restClient.POST("http://localhost:8080/Ir-Service/rest/service/addToGlobalInventory", itemId.toString());
+		
+	}
+
+	@Override
+	public void deleteItem(Integer itemId) {
+		restClient.POST("http://localhost:8080/Ir-Service/rest/service/deleteItem", itemId.toString());
+		
+	}
+
 
 }

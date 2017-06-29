@@ -1,5 +1,5 @@
 angular.module("mainApp")
-.service("homePageService",function($http,itemTypeService){
+.service("filterCriteriaService",function($http,itemTypeService){
 	var service={};
 	service.selectedFilterCriteria ={};
 	

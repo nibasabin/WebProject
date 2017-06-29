@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.security.Principal;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -25,7 +26,7 @@ public class CrudInventory {
 	
 
 	@RequestMapping(value="/addItem", method = RequestMethod.POST)
-	public @ResponseBody Integer addInventory( HttpServletRequest request){	
+	public @ResponseBody Integer addInventory( HttpServletRequest request,Principal principal){	
 		Integer output = null;
 		try {
 			ObjectMapper mapper = new ObjectMapper();
@@ -33,10 +34,16 @@ public class CrudInventory {
 			JSONObject jsonObject = new JSONObject();
 		
 				try {
+					jsonObject.put("category",item.getCategory());
 					jsonObject.put("type", item.getType());
-					jsonObject.put("description", item.getDescription());
 					jsonObject.put("image", item.getImage());
 					jsonObject.put("price", item.getPrice());
+					jsonObject.put("description", item.getDescription());
+					jsonObject.put("newItem", item.getNewItem());
+					jsonObject.put("usedItem", item.getUsedItem());
+					jsonObject.put("sellerName", principal.getName());
+					jsonObject.put("itemSold", false);
+					
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}

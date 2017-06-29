@@ -1,4 +1,4 @@
-angular.module("sighUpModule")
+angular.module("mainApp")
 .service("signUpService",function($http){
 	var service ={};
 	service.addUser = function (userInfo){
