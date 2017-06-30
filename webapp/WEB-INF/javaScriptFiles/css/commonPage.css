@@ -401,6 +401,11 @@ white-space: nowrap;
 	width:75px;
 }
 
-.nav li.selected {
- background-color:red !important;
+.navbar ul>li>button:hover {
+    border-bottom: 5px solid white !important;
+}
+.navbar ul>li>button:focus {
+    background-color:white;
+    color:#9a3334;
+
 }
